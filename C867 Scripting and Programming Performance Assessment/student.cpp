@@ -36,9 +36,22 @@ void Student::setDegreeProgram(DegreeProgram degPrgm) {
 }
 
 // Accessors
-string getFirstName();
-string getLastName();
-string getEmailAddress();
-int getAge();
-int getNumDays2Complete();
-string getDegreeProgram();
+string Student::getFirstName() {
+   return studentFirstName;
+}
+string Student::getLastName() {
+   return studentLastName;
+}
+string Student::getEmailAddress() {
+   return studentEmailAddress;
+}
+int Student::getAge() {
+   return studentAge;
+}
+//FIXME: Figure out how to return a vector
+vector Student::getNumDays2Complete() {
+   return numDays2Complete{};
+}
+DegreeProgram Student::getDegreeProgram() {
+   return degreeProgram;
+}

@@ -15,6 +15,7 @@ class Student {
    void setEmailAddress(string emailAddress);
    void setAge(int age);
    void setNumDays2Complete(int course1Days, int course2Days, int course3Days);
+   //FIXME: names for degree program (DegreeProgram, degreeProgram, degPrgm) could get confusing. Try and think of something else.
    void setDegreeProgram(DegreeProgram degPrgm);
    
    // Accessors
@@ -22,8 +23,8 @@ class Student {
    string getLastName();
    string getEmailAddress();
    int getAge();
-   int getNumDays2Complete();
-   string getDegreeProgram();
+   vector<int> getNumDays2Complete();
+   DegreeProgram getDegreeProgram();
    
    private:
     string studentID;
