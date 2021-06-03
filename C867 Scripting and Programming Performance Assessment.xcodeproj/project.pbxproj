@@ -66,10 +66,10 @@
 			children = (
 				2378E3A22665771B00BA9932 /* main.cpp */,
 				2378E3A926657A4B00BA9932 /* degree.h */,
-				2378E3AC26657A5A00BA9932 /* roster.cpp */,
 				2378E3AD26657A5A00BA9932 /* roster.h */,
-				2378E3AA26657A5A00BA9932 /* student.cpp */,
+				2378E3AC26657A5A00BA9932 /* roster.cpp */,
 				2378E3AB26657A5A00BA9932 /* student.h */,
+				2378E3AA26657A5A00BA9932 /* student.cpp */,
 			);
 			path = "C867 Scripting and Programming Performance Assessment";
 			sourceTree = "<group>";
