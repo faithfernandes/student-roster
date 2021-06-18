@@ -1,59 +1,95 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include "degree.h"
-#include "roster.h"
 #include "student.h"
 using namespace std;
 
 
 
-//Definitions from student.h
+//Empty constructor for student objects
+Student::Student(){
+   this->studentID = "";
+   this->studentFirstName = "";
+   this->studentLastName = "";
+   this->studentEmailAddress = "";
+   this->studentAge = 0;
+   for (int i = 0; i < daysArraySize; ++i) {
+      this->numDays2Complete[i] = 0;
+   }
+   this->degreeProgram = DegreeProgram::UNDECLARED;
+}
+
+// Constructor with parameters
+Student::Student(string studentID, string studentFirstName, string studentLastName, string studentEmailAddress, int studentAge, int numDays2Complete[], DegreeProgram degreeProgram) {
+   this->studentID = studentID;
+   this->studentFirstName = studentFirstName;
+   this->studentLastName = studentLastName;
+   this->studentEmailAddress = studentEmailAddress;
+   this->studentAge = studentAge;
+   for (int i = 0; i < daysArraySize; ++i) {
+      this->numDays2Complete[i] = numDays2Complete[i];
+   }
+   this->degreeProgram = degreeProgram;
+}
+
+// Destructor
+Student::~Student() {}
+
+// Used in Roster::printAll(); prints one student at a time
+void Student::print() {
+   cout << this->studentID << '\t';
+   cout << this->studentFirstName << '\t';
+   cout << this->studentLastName << '\t';
+   cout << this->studentEmailAddress << '\t';
+   cout << this->studentAge << '\t';
+   cout << this->numDays2Complete[0] << '\t';
+   cout << this->numDays2Complete[1] << '\t';
+   cout << this->numDays2Complete[2] << '\t';
+   cout << degreeProgramStrings[(int)this->degreeProgram] << endl;
+}
 
 // Mutators
-void Student::setFirstName(string firstName) {
-   studentFirstName = firstName;
-   return;
+void Student::setStudentID(string studentID) {
+   this->studentID = studentID;
 }
-void Student::setLastName(string lastName) {
-   studentLastName = lastName;
-   return;
+void Student::setFirstName(string studentFirstName) {
+   this->studentFirstName = studentFirstName;
 }
-void Student::setEmailAddress(string emailAddress) {
-   studentEmailAddress = emailAddress;
-   return;
+void Student::setLastName(string studentLastName) {
+   this->studentLastName = studentLastName;
 }
-void Student::setAge(int age) {
-   studentAge = age;
-   return;
+void Student::setEmailAddress(string studentEmailAddress) {
+   this->studentEmailAddress = studentEmailAddress;
 }
-void Student::setNumDays2Complete(int course1Days, int course2Days, int course3Days) {
-   numDays2Complete.at(0) = course1Days;
-   numDays2Complete.at(1) = course2Days;
-   numDays2Complete.at(2) = course3Days;
-   return;
+void Student::setAge(int studentAge) {
+   this->studentAge = studentAge;
 }
-void Student::setDegreeProgram(DegreeProgram degPrgm) {
-   degreeProgram = degPrgm;
+void Student::setNumDays2Complete(const int numDays2Complete[]) {
+   for (int i = 0; i < daysArraySize; ++i) {
+      this->numDays2Complete[i] - numDays2Complete[i];
+   }
+}
+void Student::setDegreeProgram(DegreeProgram degreeProgram) {
+   this->degreeProgram = degreeProgram;
 }
 
 // Accessors
+string Student::getStudentID() {
+   return this->studentID;
+}
 string Student::getFirstName() {
-   return studentFirstName;
+   return this->studentFirstName;
 }
 string Student::getLastName() {
-   return studentLastName;
+   return this->studentLastName;
 }
 string Student::getEmailAddress() {
-   return studentEmailAddress;
+   return this->studentEmailAddress;
 }
 int Student::getAge() {
-   return studentAge;
+   return this->studentAge;
 }
-//FIXME: Figure out how to return a vector
-vector Student::getNumDays2Complete() {
-   return numDays2Complete{};
+const int* Student::getNumDays2Complete() {
+   return this->numDays2Complete;
 }
 DegreeProgram Student::getDegreeProgram() {
-   return degreeProgram;
+   return this->degreeProgram;
 }
+
