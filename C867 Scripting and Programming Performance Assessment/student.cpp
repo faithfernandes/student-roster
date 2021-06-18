@@ -34,15 +34,15 @@ Student::~Student() {}
 
 // Used in Roster::printAll(); prints one student at a time
 void Student::print() {
-   cout << this->studentID << '\t';
-   cout << this->studentFirstName << '\t';
-   cout << this->studentLastName << '\t';
-   cout << this->studentEmailAddress << '\t';
-   cout << this->studentAge << '\t';
-   cout << this->numDays2Complete[0] << '\t';
+   cout << this->studentID << '\t' << '\t' ;
+   cout << "First Name: " << this->studentFirstName << '\t'<< '\t';
+   cout << "Last Name: " << this->studentLastName << '\t'<< '\t';
+   cout << "Email: " << this->studentEmailAddress << '\t'<< '\t';
+   cout << "Age: " << this->studentAge << '\t'<< '\t';
+   cout << "Days in Course: " << this->numDays2Complete[0] << '\t';
    cout << this->numDays2Complete[1] << '\t';
-   cout << this->numDays2Complete[2] << '\t';
-   cout << degreeProgramStrings[(int)this->degreeProgram] << endl;
+   cout << this->numDays2Complete[2] << '\t'<< '\t';
+   cout << "Degree Program: " << degreeProgramStrings[(int)this->degreeProgram] << endl;
 }
 
 // Mutators
