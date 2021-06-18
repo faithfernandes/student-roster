@@ -25,7 +25,7 @@ int main() {
    // F1. Print out to screen the course title, programming language used, your WGU student ID, and name
    cout << "C867 - Scripting & Programming: Applications" << endl;
    cout << "Language - C++" << endl;
-   cout << "Student ID - #########" << endl; // FIXME: Add student ID before turning in (do not post to GitHub)
+   cout << "Student ID - #########" << endl; // FIXME: Add student ID before turning in (do not post ID to GitHub)
    cout << "Name - Faith Fernandes" << endl;
    cout << endl;
    
