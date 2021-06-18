@@ -12,7 +12,7 @@ using namespace std;
 // main() function in main.cpp that contains the required function calls to meet assignment requirements
 int main() {
 
-   //  A.  studentData Table with personal information added
+   //  A.  studentData Table with personal information added 
    const string studentData[] = {
       "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
       "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
